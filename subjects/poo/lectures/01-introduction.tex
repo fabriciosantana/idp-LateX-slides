@@ -1,25 +1,10 @@
-\ifdefined\idpCombinedMode
-\else
-\documentclass{idpbeamer}
-\fi
+\input{idp-lecture-file.tex}
 
-\course{POO Java}
-\lecturetitle{Aula 01\\Programação Orientada a Objetos em Java}
-\ifdefined\idpCombinedMode
-\else
-\professor{Prof. Dr. Nome do Professor}
-\fi
+\lectureinfo{POO Java}{Aula 01\\Programação Orientada a Objetos em Java}{Prof. Dr. Nome do Professor}
 
-\ifdefined\idpCombinedMode
-\titleSlide
-\else
-\startLecture
-\fi
+\startLectureFile
 
-\ifdefined\pooCodePath
-\else
-\def\pooCodePath{../code}
-\fi
+\providecommand{\pooCodePath}{../code}
 
 \section{Objetivos}
 
@@ -51,7 +36,4 @@ Crie uma classe com seu nome e faça o programa imprimir uma pequena apresentaç
 \end{block}
 \end{frame}
 
-\ifdefined\idpCombinedMode
-\else
-\expandafter\finishLecture
-\fi
+\finishLectureFile

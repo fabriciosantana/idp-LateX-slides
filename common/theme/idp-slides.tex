@@ -50,6 +50,14 @@
 \newcommand{\lecturedate}[1]{\date{#1}\setrightfooter{#1}}
 \newcommand{\contactemail}[1]{\setcontactemail{#1}}
 \newcommand{\linkedinprofile}[1]{\setlinkedin{#1}}
+\newcommand{\lectureinfo}[3]{%
+  \course{#1}
+  \lecturetitle{#2}
+  \ifdefined\idpCombinedMode
+  \else
+    \professor{#3}
+  \fi
+}
 
 \newcommand{\titleSlide}{%
   \begin{frame}[plain]
@@ -65,6 +73,21 @@
 
 \newcommand{\finishLecture}{%
   \end{document}
+}
+
+\newcommand{\startLectureFile}{%
+  \ifdefined\idpCombinedMode
+    \titleSlide
+  \else
+    \startLecture
+  \fi
+}
+
+\newcommand{\finishLectureFile}{%
+  \ifdefined\idpCombinedMode
+  \else
+    \expandafter\finishLecture
+  \fi
 }
 
 \newcommand{\startSubject}{%

@@ -1,20 +1,8 @@
-\ifdefined\idpCombinedMode
-\else
-\documentclass{idpbeamer}
-\fi
+\input{idp-lecture-file.tex}
 
-\course{POO Java}
-\lecturetitle{Aula 02\\Plataforma Java}
-\ifdefined\idpCombinedMode
-\else
-\professor{Prof. Dr. Nome do Professor}
-\fi
+\lectureinfo{POO Java}{Aula 02\\Plataforma Java}{Prof. Dr. Nome do Professor}
 
-\ifdefined\idpCombinedMode
-\titleSlide
-\else
-\startLecture
-\fi
+\startLectureFile
 
 \section{Plataforma}
 
@@ -40,7 +28,4 @@ A plataforma Java reúne linguagem, bibliotecas, ferramentas e um ambiente de ex
 O compilador transforma código-fonte em bytecode, e a JVM executa esse bytecode no sistema operacional disponível.
 \end{frame}
 
-\ifdefined\idpCombinedMode
-\else
-\expandafter\finishLecture
-\fi
+\finishLectureFile
