@@ -3,8 +3,8 @@
     "./common/theme",
     "./common/assets"
   ],
-  "latex-workshop.latex.outDir": "build/pdf",
-  "latex-workshop.latex.auxDir": "build/aux",
+  "latex-workshop.latex.outDir": "./build/pdf",
+  "latex-workshop.latex.auxDir": "./build/aux",
   "cSpell.language": "en,pt-BR",
   "cSpell.words": [
     "idpbeamer",
