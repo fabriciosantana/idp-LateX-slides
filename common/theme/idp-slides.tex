@@ -50,14 +50,14 @@
 \newcommand{\lecturedate}[1]{\date{#1}\setrightfooter{#1}}
 \newcommand{\contactemail}[1]{\setcontactemail{#1}}
 \newcommand{\linkedinprofile}[1]{\setlinkedin{#1}}
-\newcommand{\lectureinfo}[3]{%
+\newcommand{\presentationinfo}[5]{%
   \course{#1}
   \lecturetitle{#2}
-  \ifdefined\idpCombinedMode
-  \else
-    \professor{#3}
-  \fi
+  \professor{#3}
+  \contactemail{#4}
+  \linkedinprofile{#5}
 }
+\newcommand{\lectureinfo}[5]{\presentationinfo{#1}{#2}{#3}{#4}{#5}}
 \newcommand{\sourcehref}[2]{%
   \vfill
   {\scriptsize Fonte: \href{#1}{#2}}
