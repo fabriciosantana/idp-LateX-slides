@@ -40,7 +40,7 @@
 \setrightfooter{2º semestre 2026}
 \setcontactemail{email@dominio.com}
 \setlinkedin{linkedin.com/in/seu-perfil}
-\date{2º semestre 2026}
+\date{}
 \titlegraphic{}
 
 \newcommand{\course}[1]{\setcenterfooter{#1}}
@@ -50,6 +50,13 @@
 \newcommand{\lecturedate}[1]{\date{#1}\setrightfooter{#1}}
 \newcommand{\contactemail}[1]{\setcontactemail{#1}}
 \newcommand{\linkedinprofile}[1]{\setlinkedin{#1}}
+\newcommand{\lectureobjectives}[1]{%
+  \setlectureobjectives{%
+    \begin{itemize}
+      #1
+    \end{itemize}
+  }%
+}
 \newcommand{\presentationinfo}[5]{%
   \course{#1}
   \lecturetitle{#2}
@@ -74,6 +81,7 @@
   \begin{frame}[plain]
     \titlepage
   \end{frame}
+  \clearlectureobjectives
 }
 
 \newcommand{\startLecture}{%

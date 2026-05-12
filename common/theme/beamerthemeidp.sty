@@ -19,6 +19,7 @@
 \newcommand{\IDP@logopath}{}
 \newcommand{\IDP@email}{email@dominio.com}
 \newcommand{\IDP@linkedin}{linkedin.com/in/seu-perfil}
+\newcommand{\IDP@objectives}{}
 
 \newcommand{\setleftfooter}[1]{\renewcommand{\IDP@leftfooter}{#1}}
 \newcommand{\setcenterfooter}[1]{\renewcommand{\IDP@centerfooter}{#1}}
@@ -26,6 +27,8 @@
 \newcommand{\setidplogo}[1]{\renewcommand{\IDP@logopath}{#1}}
 \newcommand{\setcontactemail}[1]{\renewcommand{\IDP@email}{#1}}
 \newcommand{\setlinkedin}[1]{\renewcommand{\IDP@linkedin}{#1}}
+\newcommand{\setlectureobjectives}[1]{\renewcommand{\IDP@objectives}{#1}}
+\newcommand{\clearlectureobjectives}{\setlectureobjectives{}}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
@@ -96,7 +99,7 @@
       anchor=north west,
       inner sep=0pt,
       text width=.500\paperwidth,
-      align=left,
+      align=center,
       text=idpblue,
       font=\fontsize{15}{18}\selectfont\bfseries
     ] at ([xshift=.063\paperwidth,yshift=-.215\paperheight]current page.north west) {\IDP@centerfooter};
@@ -104,18 +107,27 @@
       anchor=north west,
       inner sep=0pt,
       text width=.500\paperwidth,
-      align=left,
+      align=center,
       text=idptext,
-      font=\fontsize{15}{18}\selectfont
+      font=\fontsize{17}{20}\selectfont\bfseries
     ] at ([xshift=.063\paperwidth,yshift=-.375\paperheight]current page.north west) {\inserttitle};
-    \node[
-      anchor=north west,
-      inner sep=0pt,
-      text width=.554\paperwidth,
-      align=left,
-      text=idptext,
-      font=\usebeamerfont{date}
-    ] at ([xshift=.063\paperwidth,yshift=-.590\paperheight]current page.north west) {\insertdate};
+    \ifx\IDP@objectives\empty\else
+      \node[
+        anchor=north west,
+        inner sep=0pt,
+        text width=.500\paperwidth,
+        align=left,
+        text=idptext,
+        font=\fontsize{9}{11}\selectfont
+      ] at ([xshift=.085\paperwidth,yshift=-.535\paperheight]current page.north west) {%
+        \begin{minipage}{.455\paperwidth}
+          {\color{idpblue}\bfseries Objetivos da aula}
+          \vspace{.35em}
+
+          \IDP@objectives
+        \end{minipage}
+      };
+    \fi
     \node[
       anchor=north west,
       inner sep=0pt,
