@@ -1,0 +1,46 @@
+\ifdefined\idpCombinedMode
+\else
+\documentclass{idpbeamer}
+\fi
+
+\course{POO Java}
+\lecturetitle{Aula 02\\Plataforma Java}
+\ifdefined\idpCombinedMode
+\else
+\professor{Prof. Dr. Nome do Professor}
+\fi
+
+\ifdefined\idpCombinedMode
+\titleSlide
+\else
+\startLecture
+\fi
+
+\section{Plataforma}
+
+\begin{frame}{Plataforma}
+A plataforma Java reúne linguagem, bibliotecas, ferramentas e um ambiente de execução portável.
+
+
+\begin{itemize}
+  \item JDK: ferramentas de desenvolvimento.
+  \item JRE: ambiente de execução.
+  \item JVM: máquina virtual que executa bytecode.
+\end{itemize}
+\end{frame}
+
+\section{Fluxo}
+
+\begin{frame}{Fluxo de Execução}
+\begin{center}
+\Large
+\texttt{.java} $\rightarrow$ \texttt{.class} $\rightarrow$ JVM
+\end{center}
+
+O compilador transforma código-fonte em bytecode, e a JVM executa esse bytecode no sistema operacional disponível.
+\end{frame}
+
+\ifdefined\idpCombinedMode
+\else
+\expandafter\finishLecture
+\fi

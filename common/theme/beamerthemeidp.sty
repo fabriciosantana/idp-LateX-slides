@@ -1,0 +1,177 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemeidp}[2026/05/12 Tema Beamer IDP alinhado ao template de graduacao]
+
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+
+\mode<presentation>
+\usetikzlibrary{calc}
+
+\definecolor{idpblue}{RGB}{17,73,113}
+\definecolor{idppurple}{RGB}{156,123,212}
+\definecolor{idptext}{RGB}{127,127,127}
+\definecolor{idpwhite}{RGB}{242,242,242}
+
+\newcommand{\IDP@leftfooter}{}
+\newcommand{\IDP@centerfooter}{}
+\newcommand{\IDP@rightfooter}{}
+\newcommand{\IDP@logopath}{}
+\newcommand{\IDP@email}{email@dominio.com}
+\newcommand{\IDP@linkedin}{linkedin.com/in/seu-perfil}
+
+\newcommand{\setleftfooter}[1]{\renewcommand{\IDP@leftfooter}{#1}}
+\newcommand{\setcenterfooter}[1]{\renewcommand{\IDP@centerfooter}{#1}}
+\newcommand{\setrightfooter}[1]{\renewcommand{\IDP@rightfooter}{#1}}
+\newcommand{\setidplogo}[1]{\renewcommand{\IDP@logopath}{#1}}
+\newcommand{\setcontactemail}[1]{\renewcommand{\IDP@email}{#1}}
+\newcommand{\setlinkedin}[1]{\renewcommand{\IDP@linkedin}{#1}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamercolor{normal text}{fg=idptext,bg=white}
+\setbeamercolor{structure}{fg=idppurple}
+\setbeamercolor{frametitle}{fg=idpwhite,bg=white}
+\setbeamercolor{framesubtitle}{fg=idptext,bg=white}
+\setbeamercolor{title}{fg=idptext,bg=white}
+\setbeamercolor{author}{fg=idptext,bg=white}
+\setbeamercolor{date}{fg=idptext,bg=white}
+\setbeamercolor{section in toc}{fg=idptext}
+\setbeamercolor{itemize item}{fg=idptext}
+\setbeamercolor{itemize subitem}{fg=idptext}
+\setbeamercolor{enumerate item}{fg=idptext}
+\setbeamercolor{block title}{fg=idpwhite,bg=idpblue}
+\setbeamercolor{block body}{fg=idptext,bg=white}
+
+\setbeamerfont{title}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
+\setbeamerfont{author}{size=\fontsize{14}{16}\selectfont}
+\setbeamerfont{date}{size=\fontsize{14}{16}\selectfont}
+\setbeamerfont{frametitle}{size=\fontsize{20}{22}\selectfont,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\fontsize{14}{16}\selectfont}
+\setbeamerfont{normal text}{size=\fontsize{12}{15}\selectfont}
+
+\setbeamersize{text margin left=1.5cm,text margin right=1.5cm}
+
+\setbeamertemplate{background canvas}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] (current page.south west) rectangle (current page.north east);
+    \fill[idpblue]
+      (current page.north west)
+      rectangle
+      ([xshift=.9125\paperwidth,yshift=-.2000\paperheight]current page.north west);
+    \fill[idppurple]
+      ([xshift=.1557\paperwidth,yshift=-.1852\paperheight]current page.north west)
+      rectangle
+      ([xshift=.8443\paperwidth,yshift=-.2250\paperheight]current page.north west);
+    \fill[idpwhite!85!black]
+      (current page.south west)
+      rectangle
+      ([xshift=.0625\paperwidth,yshift=.1269\paperheight]current page.south west);
+    \ifx\IDP@logopath\empty\else
+      \node[anchor=south west,inner sep=0pt] at ([xshift=.0182\paperwidth,yshift=.0176\paperheight]current page.south west)
+        {\includegraphics[height=.0917\paperheight]{\IDP@logopath}};
+    \fi
+  \end{tikzpicture}%
+}
+
+\setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] (current page.south west) rectangle (current page.north east);
+    \fill[idpblue]
+      ([xshift=.6042\paperwidth]current page.south west)
+      rectangle
+      (current page.north east);
+    \fill[idpwhite!85!black]
+      (current page.south west)
+      rectangle
+      ([xshift=.0625\paperwidth,yshift=.1269\paperheight]current page.south west);
+    \ifx\IDP@logopath\empty\else
+      \node[anchor=south west,inner sep=0pt] at ([xshift=.0182\paperwidth,yshift=.0176\paperheight]current page.south west)
+        {\includegraphics[height=.0917\paperheight]{\IDP@logopath}};
+    \fi
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.500\paperwidth,
+      align=left,
+      text=idptext,
+      font=\usebeamerfont{title}
+    ] at ([xshift=.063\paperwidth,yshift=-.271\paperheight]current page.north west) {\inserttitle};
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.554\paperwidth,
+      align=left,
+      text=idptext,
+      font=\usebeamerfont{author}
+    ] at ([xshift=.063\paperwidth,yshift=-.540\paperheight]current page.north west) {\insertauthor};
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.554\paperwidth,
+      align=left,
+      text=idptext,
+      font=\usebeamerfont{date}
+    ] at ([xshift=.063\paperwidth,yshift=-.590\paperheight]current page.north west) {\insertdate};
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.218\paperwidth,
+      align=left,
+      text=white,
+      font=\fontsize{9}{11}\selectfont
+    ] at ([xshift=.617\paperwidth,yshift=-.805\paperheight]current page.north west) {\IDP@email};
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.258\paperwidth,
+      align=left,
+      text=white,
+      font=\fontsize{9}{11}\selectfont
+    ] at ([xshift=.617\paperwidth,yshift=-.865\paperheight]current page.north west) {\IDP@linkedin};
+  \end{tikzpicture}%
+}
+
+\setbeamertemplate{frametitle}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[
+      anchor=north west,
+      inner sep=0pt,
+      text width=.760\paperwidth,
+      align=left,
+      text=idpwhite,
+      font=\usebeamerfont{frametitle}
+    ] at ([xshift=.049\paperwidth,yshift=-.064\paperheight]current page.north west) {\insertframetitle};
+    \ifx\insertframesubtitle\@empty
+    \else
+      \node[
+        anchor=north west,
+        inner sep=0pt,
+        text width=.413\paperwidth,
+        align=left,
+        text=idptext,
+        font=\usebeamerfont{framesubtitle}
+      ] at ([xshift=.190\paperwidth,yshift=-.350\paperheight]current page.north west) {\insertframesubtitle};
+    \fi
+  \end{tikzpicture}%
+  \vspace*{1.45cm}%
+}
+
+\setbeamertemplate{itemize item}{\raisebox{0.2ex}{\scriptsize$\bullet$}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{\tiny$\bullet$}}
+
+\setbeamertemplate{section in toc}{%
+  \leavevmode\inserttocsection\par%
+}
+
+\newcommand{\lectureOutline}{%
+  \begin{frame}
+    \frametitle{Sumario}
+    \tableofcontents
+  \end{frame}
+}
+
+\mode<all>

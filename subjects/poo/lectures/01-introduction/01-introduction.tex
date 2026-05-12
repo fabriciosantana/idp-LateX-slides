@@ -1,0 +1,58 @@
+\ifdefined\idpCombinedMode
+\else
+\documentclass{idpbeamer}
+\fi
+
+\course{POO Java}
+\lecturetitle{Aula 01\\Programação Orientada a Objetos em Java}
+\ifdefined\idpCombinedMode
+\else
+\professor{Prof. Dr. Nome do Professor}
+\fi
+
+\ifdefined\idpCombinedMode
+\titleSlide
+\else
+\startLecture
+\fi
+
+\section{Objetivos}
+
+\begin{frame}{Objetivos}
+Nesta aula, vamos organizar o vocabulário inicial da disciplina e preparar o ambiente para os primeiros programas em Java.
+
+\begin{itemize}
+  \item Entender o papel de classes, objetos e métodos.
+  \item Compilar e executar um programa Java simples.
+  \item Identificar a estrutura mínima de uma aplicação.
+\end{itemize}
+\end{frame}
+
+\section{Primeiro Programa}
+
+\begin{frame}[fragile]{Primeiro Programa}
+\begin{lstlisting}
+public class OlaMundo {
+    public static void main(String[] args) {
+        System.out.println("Ola, mundo!");
+    }
+}
+\end{lstlisting}
+
+O nome do arquivo deve acompanhar o nome da classe pública: \texttt{OlaMundo.java}.
+\end{frame}
+
+\section{Próximos Passos}
+
+\begin{frame}{Próximos Passos}
+Ao final da aula, registre dúvidas e exemplos que merecem voltar na próxima discussão.
+
+\begin{block}{Para praticar}
+Crie uma classe com seu nome e faça o programa imprimir uma pequena apresentação no terminal.
+\end{block}
+\end{frame}
+
+\ifdefined\idpCombinedMode
+\else
+\expandafter\finishLecture
+\fi

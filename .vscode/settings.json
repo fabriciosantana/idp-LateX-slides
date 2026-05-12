@@ -1,0 +1,20 @@
+{
+  "latex-workshop.latex.texDirs": [
+    "./common/theme",
+    "./common/assets"
+  ],
+  "latex-workshop.latex.outDir": "build/pdf",
+  "latex-workshop.latex.auxDir": "build/aux",
+  "cSpell.language": "en,pt-BR",
+  "cSpell.words": [
+    "idpbeamer",
+    "beamerthemeidp",
+    "frametitle",
+    "framesubtitle",
+    "latexmkrc",
+    "Beamer",
+    "beamer",
+    "aspectratio",
+    "println"
+  ]
+}

@@ -1,0 +1,77 @@
+\RequirePackage{beamerthemeidp}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=.92]{helvet}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\renewcommand{\familydefault}{\sfdefault}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=idpblue,
+  urlcolor=idpblue,
+  citecolor=idpblue
+}
+
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{idpblue}\bfseries,
+  commentstyle=\color{idpmuted},
+  stringstyle=\color{idppurple},
+  showstringspaces=false,
+  columns=fullflexible,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{idppurple},
+  backgroundcolor=\color{white},
+  tabsize=2
+}
+
+\graphicspath{{image/}}
+\setidplogo{IDP.png}
+\setleftfooter{IDP}
+\setrightfooter{\today}
+\setcontactemail{email@dominio.com}
+\setlinkedin{linkedin.com/in/seu-perfil}
+\date{\today}
+\titlegraphic{}
+
+\newcommand{\course}[1]{\setcenterfooter{#1}}
+\newcommand{\institution}[1]{\setleftfooter{#1}}
+\newcommand{\professor}[1]{\author{#1}}
+\newcommand{\lecturetitle}[1]{\title{#1}}
+\newcommand{\lecturedate}[1]{\date{#1}\setrightfooter{#1}}
+\newcommand{\contactemail}[1]{\setcontactemail{#1}}
+\newcommand{\linkedinprofile}[1]{\setlinkedin{#1}}
+
+\newcommand{\titleSlide}{%
+  \begin{frame}[plain]
+    \titlepage
+  \end{frame}
+}
+
+\newcommand{\startLecture}{%
+  \begin{document}
+  \titleSlide
+  \lectureOutline
+}
+
+\newcommand{\finishLecture}{%
+  \end{document}
+}
+
+\newcommand{\startSubject}{%
+  \begin{document}
+  \titleSlide
+}
+
+\newcommand{\finishSubject}{%
+  \end{document}
+}
