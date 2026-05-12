@@ -31,7 +31,6 @@
 \newcommand{\clearlectureobjectives}{\setlectureobjectives{}}
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{blocks}[rounded][shadow=false]
 
@@ -48,6 +47,7 @@
 \setbeamercolor{enumerate item}{fg=idptext}
 \setbeamercolor{block title}{fg=idpwhite,bg=idpblue}
 \setbeamercolor{block body}{fg=idptext,bg=white}
+\setbeamercolor{idp footer}{fg=idpwhite,bg=idpblue}
 
 \setbeamerfont{title}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
 \setbeamerfont{author}{size=\fontsize{14}{16}\selectfont}
@@ -55,8 +55,21 @@
 \setbeamerfont{frametitle}{size=\fontsize{20}{22}\selectfont,series=\bfseries}
 \setbeamerfont{framesubtitle}{size=\fontsize{14}{16}\selectfont}
 \setbeamerfont{normal text}{size=\fontsize{12}{15}\selectfont}
+\setbeamerfont{idp footer}{size=\fontsize{6.5}{8}\selectfont}
 
 \setbeamersize{text margin left=1.5cm,text margin right=1.5cm}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.8ex,dp=1.2ex]{idp footer}%
+    \usebeamerfont{idp footer}%
+    \makebox[\paperwidth]{%
+      \makebox[.333333\paperwidth][l]{\hspace*{.085\paperwidth}\IDP@centerfooter}%
+      \makebox[.333333\paperwidth][c]{\IDP@rightfooter}%
+      \makebox[.333334\paperwidth][r]{\insertauthor\hspace*{.045\paperwidth}}%
+    }%
+  \end{beamercolorbox}%
+}
 
 \setbeamertemplate{background canvas}{%
   \begin{tikzpicture}[remember picture,overlay]
@@ -70,11 +83,11 @@
       rectangle
       ([xshift=.8443\paperwidth,yshift=-.2250\paperheight]current page.north west);
     \fill[idpwhite!85!black]
-      (current page.south west)
+      ([yshift=.052\paperheight]current page.south west)
       rectangle
-      ([xshift=.0625\paperwidth,yshift=.1269\paperheight]current page.south west);
+      ([xshift=.0625\paperwidth,yshift=.164\paperheight]current page.south west);
     \ifx\IDP@logopath\empty\else
-      \node[anchor=south west,inner sep=0pt] at ([xshift=.0182\paperwidth,yshift=.0176\paperheight]current page.south west)
+      \node[anchor=south west,inner sep=0pt] at ([xshift=.0182\paperwidth,yshift=.068\paperheight]current page.south west)
         {\includegraphics[height=.0917\paperheight]{\IDP@logopath}};
     \fi
   \end{tikzpicture}%
