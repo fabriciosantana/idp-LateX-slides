@@ -58,6 +58,14 @@
     \professor{#3}
   \fi
 }
+\newcommand{\sourcehref}[2]{%
+  \vfill
+  {\scriptsize Fonte: \href{#1}{#2}}
+}
+\newcommand{\planreference}{%
+  \vfill
+  {\scriptsize Fonte: Plano de Ensino da Disciplina}
+}
 
 \newcommand{\titleSlide}{%
   \begin{frame}[plain]
@@ -78,6 +86,7 @@
 \newcommand{\startLectureFile}{%
   \ifdefined\idpCombinedMode
     \titleSlide
+    \lectureOutline
   \else
     \startLecture
   \fi

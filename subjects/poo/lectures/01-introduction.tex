@@ -1,39 +1,321 @@
 \input{idp-lecture-file.tex}
 
-\lectureinfo{POO Java}{Aula 01\\Programação Orientada a Objetos em Java}{Prof. Dr. Nome do Professor}
+\lectureinfo{POO Java}{Aula 01\\Introdução e contextualização}{Prof. Dr. Nome do Professor}
 
 \startLectureFile
 
-\providecommand{\pooCodePath}{../code}
+\section{Contextualização}
 
-\section{Objetivos}
-
-\begin{frame}{Objetivos}
-Nesta aula, vamos organizar o vocabulário inicial da disciplina e preparar o ambiente para os primeiros programas em Java.
-
+\begin{frame}{Objetivos da Aula}
 \begin{itemize}
-  \item Entender o papel de classes, objetos e métodos.
-  \item Compilar e executar um programa Java simples.
-  \item Identificar a estrutura mínima de uma aplicação.
+  \item Reconhecer o papel da disciplina de Programação Orientada a Objetos.
+  \item Compreender os fundamentos da linguagem de programação.
+  \item Entender a motivação pela escolha da linguagem Java.
+  \item Refletir sobre o impacto da inteligência artificial.
+  \item Conhecer o plano de ensino da disciplina.
 \end{itemize}
 \end{frame}
 
-\section{Primeiro Programa}
+\begin{frame}{Que experiências você traz?}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{0.22\textwidth}p{0.22\textwidth}p{0.22\textwidth}p{0.22\textwidth}}
+\toprule
+\textbf{1º Semestre} & \textbf{2º Semestre} & \textbf{3º Semestre} & \textbf{4º Semestre} \\
+\midrule
+Introdução à Computação & Oficina em Impressões 3D & Oficina em Soluções Web & Oficina de Equipamentos de TI \\
+\addlinespace
+Algoritmos e Lógica de Programação & Estruturas de Dados & Técnicas de Prog. e Análise de Algorit. & Arquit. e Organização de Comp. \\
+\addlinespace
+Lógica Computacional & Modelagem e Prog. Estatística & \textbf{Programação Orientada a Objetos} & Inteligência Artificial \\
+\addlinespace
+Álgebra Linear e Aplicações & Empreendedorismo e Inovação & Banco de Dados & Big Data e NoSQL \\
+\addlinespace
+Cálculo Diferencial e Integral I & Cálculo Diferencial e Integral II & Processo de Software & Redes de Comp. e Internet \\
+\bottomrule
+\end{tabular}
 
-\begin{frame}[fragile]{Primeiro Programa}
-\lstinputlisting{\pooCodePath/OlaMundo.java}
-
-O nome do arquivo deve acompanhar o nome da classe pública: \texttt{OlaMundo.java}.
+\sourcehref{https://drive.google.com/file/d/1yv4lRcL0QbDrtp5EPggcznkop8zSo_MT/view}{Matriz 2025 - disciplinas obrigatórias do 1º ao 4º semestre}
 \end{frame}
 
-\section{Próximos Passos}
-
-\begin{frame}{Próximos Passos}
-Ao final da aula, registre dúvidas e exemplos que merecem voltar na próxima discussão.
-
-\begin{block}{Para praticar}
-Crie uma classe com seu nome e faça o programa imprimir uma pequena apresentação no terminal.
+\begin{frame}{Como esta disciplina contribuirá com sua formação?}
+\begin{block}{Classe e objeto}
+Uma ideia central da disciplina é aprender a modelar conceitos, responsabilidades e comportamentos em software.
 \end{block}
+
+\sourcehref{https://saileshdhakal.com.np/posts/oops-concept}{Cartoon de classe e objeto}
+\end{frame}
+
+\begin{frame}{Quais são as perspectivas de carreira ao concluir o curso?}
+\begin{block}{Alice}
+Antes de escolher ferramentas e tecnologias, precisamos discutir direção: que problemas queremos ser capazes de resolver?
+\end{block}
+
+\sourcehref{https://www.linkedin.com/pulse/se-voc\%C3\%AA-n\%C3\%A3o-sabe-para-onde-ir-qualquer-caminho-serve-pablo-berriel/}{Se você não sabe para onde ir...}
+\end{frame}
+
+\section{Programação e Inteligência Artificial}
+
+\begin{frame}{Por que aprender programação?}
+\begin{quote}
+``Everybody in this country should learn how to program a computer, should learn a computer language, because it teaches you how to think.''
+\end{quote}
+
+\hfill Steve Jobs, 1995
+
+\sourcehref{https://www.youtube.com/watch?v=BRTOIPdyPYU&t=74s}{Entrevista em vídeo}
+\end{frame}
+
+\begin{frame}{E o que muda com a inteligência artificial?}
+\begin{quote}
+``Everybody in the world is now a programmer.''
+\end{quote}
+
+\hfill Jensen Huang, 2024
+
+\sourcehref{https://www.youtube.com/watch?v=yj73GIEKmLI}{Entrevista em vídeo}
+\end{frame}
+
+\begin{frame}{E o que muda com a inteligência artificial?}
+\begin{block}{Geração de código com IA}
+Ferramentas de IA passam a participar diretamente do processo de desenvolvimento, sugerindo, revisando e produzindo código.
+\end{block}
+
+\sourcehref{https://fortune.com/2024/10/30/googles-code-ai-sundar-pichai/}{Relato sobre IA e código no Google}
+\end{frame}
+
+\begin{frame}{E o que muda com a inteligência artificial?}
+\begin{quote}
+``Probably in 2025 [...] we are going to have an AI that can effectively be a sort of mid-level engineer [...] that can write code.''
+\end{quote}
+
+\hfill Mark Zuckerberg, 2025
+
+\sourcehref{https://www.youtube.com/watch?v=uDL_6A6zB0w}{Entrevista em vídeo}
+\end{frame}
+
+\begin{frame}{E o que muda com a inteligência artificial?}
+\begin{block}{A linguagem de programação mais quente}
+Andrej Karpathy provocou a comunidade ao afirmar que a linguagem de programação mais quente é o inglês.
+\end{block}
+
+\sourcehref{https://x.com/karpathy/status/1617979122625712128}{Publicação de Andrej Karpathy}
+\end{frame}
+
+\section{Java}
+
+\begin{frame}{Qual linguagem de programação aprender?}
+A disciplina adota a linguagem de programação \textbf{Java}.
+
+\begin{block}{Por quê?}
+Java segue relevante em rankings, ecossistemas corporativos, plataformas educacionais, aplicações web, sistemas distribuídos e desenvolvimento Android.
+\end{block}
+
+\sourcehref{https://spectrum.ieee.org/top-programming-languages-2025}{IEEE Spectrum - Top Programming Languages}
+\end{frame}
+
+\begin{frame}{Qual linguagem de programação aprender?}
+A disciplina adota a linguagem de programação \textbf{Java}.
+
+\begin{block}{Índices de popularidade}
+Rankings como TIOBE ajudam a observar tendências, ainda que não substituam critérios pedagógicos e profissionais.
+\end{block}
+
+\sourcehref{https://www.tiobe.com/tiobe-index/}{TIOBE Index}
+\end{frame}
+
+\begin{frame}{Qual linguagem de programação aprender?}
+A disciplina adota a linguagem de programação \textbf{Java}.
+
+\begin{block}{Continuidade curricular}
+Java também dialoga com outras disciplinas, frameworks e práticas de desenvolvimento presentes ao longo da formação.
+\end{block}
+
+\sourcehref{https://1drv.ms/x/c/187d9a0eb7d8e7f9/Efnn2LcOmn0ggBiTLwAAAAABYnkEvdSiCdc3X7JUZgqrpg?e=Ll4Gt6}{Mapeamento de outros cursos}
+\end{frame}
+
+\section{Aprendizagem}
+
+\begin{frame}{Como ensinar/aprender programação hoje?}
+\begin{block}{Mudança de hábitos}
+Ambientes de perguntas e respostas, documentação, buscadores, assistentes de IA e repositórios públicos reorganizaram a forma como aprendemos programação.
+\end{block}
+
+\sourcehref{https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead/}{Stack Overflow is almost dead}
+\end{frame}
+
+\begin{frame}{Como ensinar/aprender programação hoje?}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}
+\begin{block}{ChatGPT}
+\begin{itemize}
+  \item Tarefas concluídas mais rapidamente.
+  \item Desempenho inferior em prova baseada apenas em memória.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.32\textwidth}
+\begin{block}{Code Llama}
+\begin{itemize}
+  \item Segundo grupo mais rápido.
+  \item Metade dos alunos aprovada na prova de memória.
+\end{itemize}
+\end{block}
+\end{column}
+\begin{column}{0.32\textwidth}
+\begin{block}{Google}
+\begin{itemize}
+  \item Maior tempo para completar as tarefas.
+  \item Todos aprovados na prova de memorização.
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\sourcehref{https://cacm.acm.org/news/the-impact-of-ai-on-computer-science-education/}{The Impact of AI on Computer Science Education}
+\end{frame}
+
+\begin{frame}{Como você vai aprender?}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+  \item Discussão em grupo: aulas dialogadas.
+  \item Leituras e resumos.
+  \item Exercícios práticos.
+  \item Seminário.
+  \item Projeto.
+  \item Aulas teóricas.
+  \item \textbf{Explorando de forma autodidata.}
+  \item \textbf{Praticando.}
+  \item \textbf{Praticando.}
+  \item \textbf{Praticando.}
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{block}{Aprender fazendo}
+Programar se aprende como bicicleta: estudando fundamentos, mas principalmente praticando, errando, corrigindo e tentando de novo.
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Como você vai aprender?}
+\begin{block}{Pirâmide de aprendizagem}
+A disciplina combina momentos de exposição, discussão, prática, explicação entre pares e produção autoral.
+\end{block}
+
+\sourcehref{https://keeps.com.br/piramide-de-aprendizagem-de-william-glasser-conceito-e-estrutura/}{Pirâmide de aprendizagem de William Glasser}
+\end{frame}
+
+\section{Plano de Ensino}
+
+\begin{frame}{O que você vai aprender?}
+\small
+\begin{itemize}
+  \item Introdução à Plataforma Java.
+  \item Introdução à Programação em Java.
+  \item Elementos da linguagem Java: tipos primitivos e operadores.
+  \item Entrada e saída de dados (I/O).
+  \item Estruturas de controle e de seleção.
+  \item Fundamentos da Programação Orientada a Objetos.
+  \item Tratamento de exceções.
+  \item Manipulação de arquivos.
+  \item Estruturas de dados e coleções.
+  \item Persistência em banco de dados relacional: JDBC e JPA.
+\end{itemize}
+
+\planreference
+\end{frame}
+
+\begin{frame}{Qual objetivo da disciplina?}
+Ao final da disciplina, os estudantes serão capazes de aplicar os princípios, fundamentos e práticas da Programação Orientada a Objetos (POO) no desenvolvimento de sistemas de software, utilizando linguagens e frameworks apropriados para criar soluções modulares, reutilizáveis e de fácil manutenção.
+
+\planreference
+\end{frame}
+
+\begin{frame}{Quais objetivos específicos?}
+\scriptsize
+\begin{itemize}
+  \item Distinguir o paradigma de orientação a objeto em face do paradigma estruturado.
+  \item Implementar algoritmos e programas com classes, objetos, coleções e associações.
+  \item Avaliar classes, classes abstratas, interfaces e enumerações.
+  \item Compreender o mecanismo de exceções e empregá-lo na construção de software mais confiável.
+  \item Construir softwares capazes de realizar persistência de dados com arquivos e bancos relacionais.
+  \item Identificar a separação de responsabilidades e aplicar camadas e MVC.
+  \item Identificar e aplicar os pilares da POO: herança, polimorfismo, encapsulamento e abstração.
+  \item Empregar conceitos avançados de POO em projetos de software.
+  \item Utilizar IDEs para implementar, testar e depurar sistemas orientados a objetos.
+  \item Avaliar a qualidade do código e refatorar sistemas conforme princípios SOLID.
+\end{itemize}
+
+\planreference
+\end{frame}
+
+\begin{frame}{Como o aprendizado será avaliado?}
+\scriptsize
+\begin{itemize}
+  \item 10 exercícios práticos de programação: 0,0 a 0,4 cada um (NE1-10).
+  \item 10 resumos de leituras: 0,0 a 0,2 cada um (NR1-10).
+  \item 10 estudos dirigidos via prompt: 0,0 a 0,2 cada um.
+  \item 10 questionários: 0,0 a 0,2 cada um (NQ1-10).
+  \item 2 provas teóricas: 0,0 a 3,0 (NT1 e NT2).
+  \item 2 provas práticas: 0,0 a 2,0 cada uma (NP1 e NP2).
+  \item Avaliação 1: NE1-5 + NR1-5 + estudos dirigidos 1-5 + NQ1-5 + NT1 + NP1.
+  \item Avaliação 2: NE6-10 + NR6-10 + estudos dirigidos 6-10 + NQ6-10 + NT2 + NP2.
+  \item Ponto adicional por participação: 0,0 a 0,5 em cada AV, não cumulativo.
+  \item Nota máxima de cada avaliação: 10,0.
+\end{itemize}
+
+\planreference
+\end{frame}
+
+\section{Próxima Aula}
+
+\begin{frame}{O que fazer para a próxima aula?}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+  \item Revisar o repositório da disciplina no GitHub.
+  \item Preparar sua estação para desenvolvimento Java.
+  \item Sugestões de ambiente:
+    \begin{itemize}
+      \item Linux, WSL, GitHub Codespaces ou Dev Containers.
+      \item VS Code e extensões Java.
+      \item JDK 21, OpenJDK ou outra distribuição do JDK.
+      \item GitHub, SDKMAN, JUnit 5 e Maven.
+    \end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{itemize}
+  \item Informações adicionais:
+    \begin{itemize}
+      \item Introduction to Linux.
+      \item Getting started with Visual Studio Code.
+      \item Intro to GitHub.
+      \item GitHub Foundations.
+    \end{itemize}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{1ª Leitura}
+\scriptsize
+\begin{itemize}
+  \item SCHILDT, Herbert. \href{https://1drv.ms/b/s!Avnn2LcOmn0Y3mnfmCUIsHXeIOq5?e=jeM4eh}{The history and evolution of Java}. In: \textit{Java: the complete reference}. 12. ed. New York: McGraw Hill, 2021. Cap. 1.
+  \item Procedimento para entrega do resumo:
+    \begin{itemize}
+      \item Escrever o resumo em folha A4 branca.
+      \item Fazer fork do repositório da disciplina.
+      \item Digitalizar em PDF e gravar no diretório \texttt{poo/readings/01-history/seunome-seusobrenome.pdf}.
+      \item Enviar pull request para o repositório da disciplina.
+      \item Submeter o link do pull request no Ambiente Virtual.
+    \end{itemize}
+  \item \textbf{Prazo}: conforme Ambiente Virtual.
+\end{itemize}
 \end{frame}
 
 \finishLectureFile
