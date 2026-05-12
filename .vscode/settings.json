@@ -16,6 +16,6 @@
     "beamer",
     "aspectratio",
     "println",
-    "latexmk",
+    "latexmk"
   ]
 }
