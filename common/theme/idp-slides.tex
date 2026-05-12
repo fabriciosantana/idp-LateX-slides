@@ -53,7 +53,10 @@
 \newcommand{\presentationinfo}[5]{%
   \course{#1}
   \lecturetitle{#2}
-  \professor{#3}
+  \ifdefined\idpCombinedMode
+  \else
+    \professor{#3}
+  \fi
   \contactemail{#4}
   \linkedinprofile{#5}
 }
